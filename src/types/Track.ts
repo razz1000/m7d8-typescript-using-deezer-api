@@ -1,12 +1,3 @@
-// To parse this data:
-//
-//   import { Convert, Track } from "./file";
-//
-//   const track = Convert.toTrack(json);
-//
-// These functions will throw an error if the JSON doesn't
-// match the expected interface, even if the JSON is valid.
-
 export interface Track {
   id: number;
   name: string;

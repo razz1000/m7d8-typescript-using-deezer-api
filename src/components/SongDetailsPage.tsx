@@ -6,7 +6,7 @@ import ShowArtistDetailsComponent from "./ShowArtistDetailsComponent";
 import { Track } from "../types/Track";
 
 let SongDetailsPage = () => {
-  const [artistDetail, setArtistDetail] = useState<Track[]>([]);
+  const [artistDetail, setArtistDetail] = useState<Track | null>(null);
 
   const params = useParams();
   const id = params.id;
@@ -26,6 +26,7 @@ let SongDetailsPage = () => {
   useEffect(() => {
     fetchData();
   }, []);
+  console.log(artistDetail);
 
   return (
     <ListGroup>
